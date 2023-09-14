@@ -11,12 +11,6 @@ on:
 jobs:
   Aria2-Aliyun:
     runs-on: ubuntu-latest
-    services:
-      aliyun:
-        image: messense/aliyundrive-webdav
-        env:
-          REFRESH_TOKEN: '${{ secrets.ALIYUN_REFRESH_TOKEN }}'
-          PORT: 8080
     steps:
       - uses: actions/checkout@v2
         with:
