@@ -47,7 +47,7 @@ jobs:
         env:
           RCLONE_CONF: ${{ secrets.RCLONE_CONF }}
         with:
-          args: copy ${{ steps.downloading.outputs.path }} onedrive:${{ github.event.inputs.Folder}}/${{ steps.downloading.outputs.filename }}
+          args: copy ${{ steps.downloading.outputs.path }} onedrive:${{ github.event.inputs.Folder}}/
           
       - name: 保存数据，删除远程已经下载列表
         id:  database
